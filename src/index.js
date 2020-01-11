@@ -5,9 +5,14 @@ const Task=require('./models/task.js')
 const userRouter=require('./routers/user.js')
 const taskRouter=require('./routers/task.js')
 const jwt=require('jsonwebtoken')
+const multer=require('multer')
 
 const app = express()
 const port=process.env.PORT || 3000
+
+const upload=multer({
+    dest:'images'
+})
 
 
 app.use(express.json())
