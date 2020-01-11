@@ -8,12 +8,7 @@ const jwt=require('jsonwebtoken')
 const multer=require('multer')
 
 const app = express()
-const port=process.env.PORT || 3000
-
-const upload=multer({
-    dest:'images'
-})
-
+const port=process.env.PORT
 
 app.use(express.json())
 app.use(userRouter)
